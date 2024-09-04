@@ -5,7 +5,7 @@ export default configureStore({
     reducer: {
         productsR: productSlice,
         reducer: {
-            
+
         }
     },
 })
