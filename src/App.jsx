@@ -1,9 +1,11 @@
-import React from 'react';
+import ProductListView from "./features/products/ProductListView";
 
 const App = () => {
   return (
     <div>
-      <div>app</div>
+      <div>
+        <ProductListView />
+      </div>
     </div>
   );
 };
