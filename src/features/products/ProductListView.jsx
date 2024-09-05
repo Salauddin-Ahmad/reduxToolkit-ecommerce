@@ -14,22 +14,24 @@ const ProductListView = () => {
     }, [dispatch]);
 
 
-    return <div>
+    return <div >
         {isLoading && <p>Laoding ...</p>}
 
         {error && <p>{error}</p>}
+        <div className="products">
+            {!isLoading && !error && products && products.length > 0 ?
+                (products.map((product) => {
+                    return <article key={product.id} className="product">
+                        <h3>{product.title}</h3>
+                        <p>{product.description}</p>
+                    </article>
+                }))
+                : (
+                    <p> No Products available</p>
+                )
+            }
+        </div>
 
-        {!isLoading && !error && products && products.length > 0 ?
-            (products.map((product) => {
-                return <article key={product.id}>
-                    <h3>{product.title}</h3>
-                    <p>{product.description}</p>
-                </article>
-            }))
-            : (
-                <p> No Products available</p>
-            )
-        }
     </div>
 
 
