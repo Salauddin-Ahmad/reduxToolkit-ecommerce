@@ -23,6 +23,7 @@ const ProductListView = () => {
             (products.map((product) => {
                 return <article key={product.id}>
                     <h3>{product.title}</h3>
+                    <p>{product.description}</p>
                 </article>
             }))
             : (
