@@ -9,18 +9,23 @@ const initialState = {
 const BASE_URL = 'http://localhost:3000/products'
 
 // fetch request with asynthunk and axios
-export const fetchProducts = createAsyncThunk('products/fetchProducts', async () => {
+export const fetchProducts = createAsyncThunk('products/fetchProduct', async () => {
     const res = await axios.get(BASE_URL);
     console.log(res.data)
     return res.data;
 })
 
 // delete request with asynthunk and axios
-export const deleteProduct = createAsyncThunk('products/delteProducts',
+export const deleteProduct = createAsyncThunk('products/delteProduct',
     async (id) => {
         const res = await axios.delete(`${BASE_URL}/${id}`);
-        console.log(res.id)
         return res
+    })
+
+export const CreateProduct = createAsyncThunk('products/createProduct',
+    async (product) => {
+        const res = await axios.post(BASE_URL, product);
+        console.log(res)
     })
 
 export const productSlice = createSlice({

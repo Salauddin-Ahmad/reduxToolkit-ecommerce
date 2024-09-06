@@ -24,6 +24,9 @@ const ProductListView = () => {
                     return <article key={product.id} className="product">
                         <h3>{product.title}</h3>
                         <p>{product.description}</p>
+                        <p>Category: {product.category}</p>
+                        <p>Price: {product.price}</p>
+                        
                         <button onClick={() => dispatch(deleteProduct(product.id))}>Delete</button>
                     </article>
                 }))
