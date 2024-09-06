@@ -13,6 +13,20 @@
       "description": "The Powder Canister is a finely milled setting powder designed to set makeup and control shine. With a lightweight and translucent formula, it provides a smooth and matte finish.",
       "price": 14.99,
       "category": "beauty"
+    },
+    {
+      "id": "csVhL7dKBD87eMbdb6hxp",
+      "title": "product",
+      "price": "44",
+      "description": "afadf",
+      "category": "beauty"
+    },
+    {
+      "id": "zFE3ayR7aVv1aspX6CnZP",
+      "title": "Lipstick",
+      "price": "234",
+      "description": "awesome",
+      "category": "beauty"
     }
   ]
 }

@@ -1,10 +1,12 @@
+import { nanoid } from "nanoid";
 import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { createProduct } from "./productSlice";
 
 
 const ProductForm = () => {
-
+    const dispatch = useDispatch()
     const [product, setProduct] = useState({
-        id: "",
         title: "",
         price: "",
         description: "",
@@ -19,7 +21,9 @@ const ProductForm = () => {
     };
     const handleSubmit = (event) => {
         event.preventDefault();
-        console.log(product)
+        dispatch(createProduct({...product, id: nanoid() }))
+
+        console.log({...product, id: nanoid()})
     }
 
     return (
@@ -43,7 +47,7 @@ const ProductForm = () => {
             </div>
             <div>
                 <label>Description</label>
-                <textarea
+                <input
                     name="description"
                     value={product.description}
                     onChange={handleChange}
@@ -60,11 +64,8 @@ const ProductForm = () => {
             <button type="submit">
                 Add Product
             </button>
-
-            <textarea>
-
-            </textarea>
         </form>
+            
     );
 };
 
