@@ -1,7 +1,7 @@
 import { useEffect } from "react";
-import { deleteProduct, fetchProducts } from "./productSlice";
+import { deleteProduct, fetchProducts, updateProduct } from "./productSlice";
 import { useDispatch, useSelector } from "react-redux";
-const ProductListView = () => {
+const ProductListView = ({onHandleSetProductToEdit}) => {
     const { products, isLoading, error } = useSelector(
         (state) => state.productsR
     );
@@ -13,6 +13,9 @@ const ProductListView = () => {
         dispatch(fetchProducts())
     }, [dispatch]);
 
+    const handleEdit = (product) => {
+        onHandleSetProductToEdit(product)
+    }
 
     return <div >
         {isLoading && <p>Laoding ...</p>}
@@ -28,6 +31,7 @@ const ProductListView = () => {
                         <p>Price: {product.price}</p>
                         
                         <button onClick={() => dispatch(deleteProduct(product.id))}>Delete</button>
+                        <button onClick={() => handleEdit(product)}>Edit</button>
                     </article>
                 }))
                 : (

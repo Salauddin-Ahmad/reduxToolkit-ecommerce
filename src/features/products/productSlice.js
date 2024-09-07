@@ -27,6 +27,12 @@ export const createProduct = createAsyncThunk('products/createProduct',
         const res = await axios.post(BASE_URL, product);
         return res.data;
     })
+export const updateProduct = createAsyncThunk('products/updateProduct',
+    async ({id, product}) => {
+        const res = await axios.put(`${BASE_URL}/${id}`, product);
+        console.log(res.data)
+        return res.data;
+    })
 
 export const productSlice = createSlice({
     name: 'products',
@@ -54,7 +60,10 @@ export const productSlice = createSlice({
                 )
             })
             .addCase(createProduct.fulfilled, (state, action) => {
-                state.products.push(action.payload)
+                state.products.push(action.payload  )
+            })
+            .addCase(updateProduct.fulfilled, (state, action) => {
+                state.products.push(action.payload  )
             })
     }
 })
