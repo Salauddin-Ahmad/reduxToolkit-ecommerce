@@ -10,12 +10,17 @@ const App = () => {
     setProductToEdit(product)
     setIsEdit(true)
   }
+  const resetForm = () => {
+    setIsEdit(false)
+    setProductToEdit({})
+  }
   return (
     <div>
       <div>
         <ProductForm
           producToEdit={producToEdit}
           isEdit={isEdit}
+          resetForm={resetForm}
         />
         <ProductListView
           onHandleSetProductToEdit={onHandleSetProductToEdit} />

@@ -15,32 +15,11 @@
       "category": "beauty"
     },
     {
-      "id": "csVhL7dKBD87eMbdb6hxp",
-      "title": "product",
-      "price": "44",
-      "description": "afadf",
-      "category": "beauty"
-    },
-    {
       "title": "Lipstick",
       "price": "234",
-      "description": "awesome and nice",
+      "description": "awesome",
       "category": "beauty",
       "id": "zFE3ayR7aVv1aspX6CnZP"
-    },
-    {
-      "id": "LdPtZW-yXC07WvWvuYHFT",
-      "title": "",
-      "price": "",
-      "description": "",
-      "category": ""
-    },
-    {
-      "id": "3z1oSFIZdtcZxUgZFch6p",
-      "title": "fdhdfh",
-      "price": "54",
-      "description": "fhfdh",
-      "category": "Classical cappuccino"
     },
     {
       "id": "3-sDOIRhm-XBi0deFCF2i",
@@ -50,11 +29,11 @@
       "category": "beauty"
     },
     {
-      "id": "-LqaLqZ_SM0vWXpIt5-iy",
-      "title": "wrwrtret",
-      "price": "34",
-      "description": "awesome",
-      "category": "Classical cappuccino"
+      "id": "b4mx3XVk9d15m4uka0-C-",
+      "title": "Iphone 15",
+      "price": "1000",
+      "description": "awesome smartphone",
+      "category": "smartphone"
     }
   ]
 }

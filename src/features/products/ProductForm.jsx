@@ -4,7 +4,7 @@ import { useDispatch } from "react-redux";
 import { createProduct, updateProduct } from "./productSlice";
 
 
-const ProductForm = ({ producToEdit = {}, isEdit = false }) => {
+const ProductForm = ({ producToEdit = {}, isEdit = false, resetForm }) => {
     console.log(producToEdit)
     const dispatch = useDispatch()
     const [product, setProduct] = useState({
@@ -36,9 +36,10 @@ const ProductForm = ({ producToEdit = {}, isEdit = false }) => {
         event.preventDefault();
         if (isEdit) {
             dispatch(updateProduct({ id: producToEdit.id, product: product }))
-            isEdit(false)
+            resetForm()
         } else {
             (dispatch(createProduct({ ...product, id: nanoid() })))
+            resetForm()
         } 
         setProduct({
             title: '',

@@ -56,7 +56,7 @@ export const productSlice = createSlice({
             })
             .addCase(deleteProduct.fulfilled, (state, action) => {
                 state.products = state.products.filter(
-                    (product) => product.id !== action.payload
+                    (product) => product.id !== action.meta.arg //for optimistic delete before server responds
                 )
             })
             .addCase(createProduct.fulfilled, (state, action) => {
