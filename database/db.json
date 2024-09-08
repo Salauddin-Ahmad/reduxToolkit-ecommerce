@@ -27,6 +27,27 @@
       "price": "234",
       "description": "awesome",
       "category": "beauty"
+    },
+    {
+      "id": "LdPtZW-yXC07WvWvuYHFT",
+      "title": "",
+      "price": "",
+      "description": "",
+      "category": ""
+    },
+    {
+      "id": "3z1oSFIZdtcZxUgZFch6p",
+      "title": "fdhdfh",
+      "price": "54",
+      "description": "fhfdh",
+      "category": "Classical cappuccino"
+    },
+    {
+      "id": "3-sDOIRhm-XBi0deFCF2i",
+      "title": "Lipstick blue",
+      "price": "234",
+      "description": "awesome",
+      "category": "beauty"
     }
   ]
 }
