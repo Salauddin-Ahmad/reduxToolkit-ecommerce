@@ -1,7 +1,7 @@
 import { nanoid } from "nanoid";
 import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
-import { createProduct } from "./productSlice";
+import { createProduct, updateProduct } from "./productSlice";
 
 
 const ProductForm = ({ producToEdit = {}, isEdit = false }) => {
@@ -34,7 +34,19 @@ const ProductForm = ({ producToEdit = {}, isEdit = false }) => {
     };
     const handleSubmit = (event) => {
         event.preventDefault();
-        dispatch(createProduct({ ...product, id: nanoid() }))
+        if (isEdit) {
+            dispatch(updateProduct({ id: producToEdit.id, product: product }))
+            isEdit(false)
+        } else {
+            (dispatch(createProduct({ ...product, id: nanoid() })))
+        } 
+        setProduct({
+            title: '',
+            price: '',
+            description: '',
+            category: '',
+        })
+
 
         console.log({ ...product, id: nanoid() })
     }
